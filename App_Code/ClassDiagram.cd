@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="YiTui.BLL.Common">
+    <Position X="4.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAA=</HashCode>
+      <FileName>App_Code\BLL\Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.BLL.DataBinding">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>App_Code\BLL\DataBinding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.BLL.Updater">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAiAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\BLL\Updater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.DAL.DataBindingDAL">
+    <Position X="6.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>App_Code\DAL\DataBindingDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.DAL.Execute">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAQAAAiAADAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\DAL\Execute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.DAL.md5">
+    <Position X="8.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>App_Code\DAL\md5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.DAL.scoreComparer" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="6.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>App_Code\DAL\RecommDAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="YiTui.DAL.objectSimilarity">
+    <Position X="6.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>App_Code\DAL\RecommDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.DAL.RecommDAL">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBAAIAAAAAAAAAgAAAAAIAAEAAIAAAAAAAAAAAIAEA=</HashCode>
+      <FileName>App_Code\DAL\RecommDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YiTui.SqlHelperParameterCache">
+    <Position X="4.25" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAEECAAIAAAAAAAARAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\DAL\SQLHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

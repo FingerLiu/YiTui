@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register assembly="DevExpress.ExpressApp.Web.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.ExpressApp.Web.Templates.ActionContainers" tagprefix="cc1" %>
+<%@ Register assembly="DevExpress.Web.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxNavBar" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+
+<%@ Register assembly="DevExpress.Web.v10.1, Version=10.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxMenu" tagprefix="dx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="MasterStyle.css" />
+    <title>易购推荐</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+      <style type="text/css">
+		.templateTable {
+			border-collapse: collapse;
+			background: #F3F8F7;
+            width: 100%;
+            text-align: center;
+		}
+		.templateTable tbody>tr 
+		{
+			height:39px;
+		}
+		
+		.templateTable td {
+			border: solid 1px #C2D4DA;
+			padding: 2px;
+		}
+		.templateCaption td.caption {
+			background: #ECF2F3;
+		}    
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="headDiv" >
+        <div class="icon" 
+        
+                style="color: #FFFF00; font-family: 楷体; font-size: x-large; font-weight: bold;">
+                <a>易购推荐</a>
+            </div>
+        <div class="loginDiv">
+            <ul id="loginUl">
+            <li>购物车</li>
+            <li>   
+                <asp:LoginName ID="LoginName1" runat="server" />
+                </li>
+            <li>   </li>
+                <asp:LoginStatus ID="LoginStatus1" runat="server" 
+                    LogoutPageUrl="~/UI/Login.aspx" />
+            </ul>
+        </div>
+            <div class="navDiv" style="text-align:center">
+        
+                <dx:ASPxMenu ID="ASPxMenu1" runat="server" AutoSeparators="RootOnly" 
+                    ClientIDMode="AutoID" CssFilePath="~/App_Themes/Aqua/{0}/styles.css" 
+                    CssPostfix="Aqua" GutterImageSpacing="7px" ShowPopOutImages="True" 
+                    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+                    <Items>
+                        <dx:MenuItem Text="随便看看" Name="RadomNav" 
+                            NavigateUrl="~/UI/Default.aspx?Type=Radom" Selected="True">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="同类热卖商品" Name="HotItemsNav" 
+                            NavigateUrl="~/UI/Default.aspx?Type=HotItems">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="好友的推荐" Name="FriendsRecommNav" 
+                            NavigateUrl="~/UI/Default.aspx?Type=FriendsRecomm">
+                        </dx:MenuItem>
+                        <dx:MenuItem Name="simItemNav" NavigateUrl="~/UI/Default.aspx?Type=simItem" 
+                            Text="相似的商品">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="综合推荐" Name="MultiRecommNav" 
+                            NavigateUrl="~/UI/Default.aspx?Type=MultiRecomm">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="新建购买会话" Name="NewSessionNav" 
+                            NavigateUrl="~/UI/NewSession.aspx">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="管理购买会话" Name="ManageSessionNav" 
+                            NavigateUrl="~/UI/ManageSession.aspx">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="个人信息管理" Name="UserInfoNav" NavigateUrl="~/UI/UserInfo.aspx">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="我的好友" Name="ContactBookNav" 
+                            NavigateUrl="~/UI/ContactBook.aspx">
+                        </dx:MenuItem>
+                        <dx:MenuItem Text="添加产品(卖家)" Name="AddItemNav" 
+                            NavigateUrl="~/UI/Seller/AddItem.aspx">
+                        </dx:MenuItem>
+                    </Items>
+                    <LoadingPanelImage Url="~/App_Themes/Aqua/Web/Loading.gif">
+                    </LoadingPanelImage>
+                    <RootItemSubMenuOffset FirstItemX="-1" FirstItemY="-1" X="-1" Y="-1" />
+                    <ItemStyle DropDownButtonSpacing="12px" Font-Size="Large" 
+                        PopOutImageSpacing="18px" VerticalAlign="Middle" />
+                    <SubMenuStyle GutterWidth="0px" />
+                </dx:ASPxMenu>
+        
+            </div>
+        </div>
+        <div class = "contentDiv">
+            <div class = "leftDiv">
+                <dx:ASPxNavBar ID="ASPxNavBar1" runat="server" 
+                    ClientIDMode="AutoID" CssFilePath="~/App_Themes/Aqua/{0}/styles.css" 
+                    CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" 
+                    onheaderclick="ASPxNavBar1_HeaderClick" onitemclick="ASPxNavBar1_ItemClick">
+                    <Groups>
+                        <dx:NavBarGroup Text="购买会话1">
+                            <Items>
+                                <dx:NavBarItem Text="推荐1">
+                                </dx:NavBarItem>
+                                <dx:NavBarItem Text="推荐2">
+                                </dx:NavBarItem>
+                                <dx:NavBarItem Text="推荐3">
+                                </dx:NavBarItem>
+                            </Items>
+                        </dx:NavBarGroup>
+                        <dx:NavBarGroup Text="购买会话2">
+                            <Items>
+                                <dx:NavBarItem Text="推荐1">
+                                </dx:NavBarItem>
+                                <dx:NavBarItem Text="推荐2">
+                                </dx:NavBarItem>
+                                <dx:NavBarItem Text="推荐3">
+                                </dx:NavBarItem>
+                            </Items>
+                        </dx:NavBarGroup>
+                        <dx:NavBarGroup Text="购买会话3">
+                            <Items>
+                                <dx:NavBarItem Text="推荐1">
+                                </dx:NavBarItem>
+                                <dx:NavBarItem Text="推荐2">
+                                </dx:NavBarItem>
+                                <dx:NavBarItem Text="推荐3">
+                                </dx:NavBarItem>
+                            </Items>
+                        </dx:NavBarGroup>
+                    </Groups>
+                    <LoadingPanelImage Url="~/App_Themes/Aqua/Web/nbLoading.gif">
+                    </LoadingPanelImage>
+                </dx:ASPxNavBar>
+            </div>
+            <div class = "rightDiv">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clear:both"></div>
+        <%--<table>
+        <tr>
+            <td>
+            
+            </td>
+            <td class="style1" width="100%">
+            
+            </td>
+        </tr>
+        </table>--%>
+        </div>
+ </form>
+<div class="footerDiv">
+Copyright solo @dlut 2013</div>
+</body>
+</html>
